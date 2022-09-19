@@ -16,17 +16,20 @@ public class AddressBook {
         this.buddies.add(buddy);
     }
 
-    public void removeBuddy(BuddyInfo name) {
+    public void removeBuddy(BuddyInfo buddy) {
 
         if (this.buddies.size() > 0) {
-            for (BuddyInfo i : this.buddies)
-                if (i.getName().equals(name)) {
+            for (int i = 0; i < this.buddies.size(); i++)
+                if (this.buddies.get(i).getName().equals(buddy.getName())) {
                     this.buddies.remove(i);
                 }
         }
     }
 
     public static void main(String[] args) {
-        System.out.println("Address Book");
+        BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
+        AddressBook addressBook = new AddressBook();
+        addressBook.addBuddy(buddy);
+        addressBook.removeBuddy(buddy);
     }
 }
