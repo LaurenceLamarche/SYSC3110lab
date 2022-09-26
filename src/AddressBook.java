@@ -33,5 +33,6 @@ public class AddressBook {
         addressBook.addBuddy(buddy);
         addressBook.removeBuddy(buddy);
         addressBook.addBuddy(buddy2);
+        //this shall be added when?
     }
 }
